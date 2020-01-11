@@ -1,0 +1,43 @@
+package com.bhhan.freelec.springboot2webservice.domain.posts;
+
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+/**
+ * Created by hbh5274@gmail.com on 2020-01-11
+ * Github : http://github.com/bhhan5274
+ */
+
+@Entity
+@Table(name = "POSTS")
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(length = 500, nullable = false)
+    private String title;
+
+    @Column(columnDefinition = "TEXT", nullable = false)
+    private String content;
+
+    private String author;
+
+    @Builder
+    public Post(String title, String content, String author){
+        this.title = title;
+        this.content = content;
+        this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+}
