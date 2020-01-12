@@ -1,5 +1,6 @@
 package com.bhhan.freelec.springboot2webservice.domain.posts;
 
+import com.bhhan.freelec.springboot2webservice.domain.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,7 +17,7 @@ import javax.persistence.*;
 @Table(name = "POSTS")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Post {
+public class Post extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
