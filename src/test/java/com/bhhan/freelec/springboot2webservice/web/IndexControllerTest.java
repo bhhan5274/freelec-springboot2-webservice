@@ -1,5 +1,6 @@
 package com.bhhan.freelec.springboot2webservice.web;
 
+import com.bhhan.freelec.springboot2webservice.common.BaseTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Github : http://github.com/bhhan5274
  */
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class IndexControllerTest {
+public class IndexControllerTest extends BaseTest {
     @Autowired
     private MockMvc mockMvc;
 

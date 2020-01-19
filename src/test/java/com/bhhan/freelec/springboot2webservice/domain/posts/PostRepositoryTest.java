@@ -1,10 +1,12 @@
 package com.bhhan.freelec.springboot2webservice.domain.posts;
 
+import com.bhhan.freelec.springboot2webservice.common.BaseTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDateTime;
@@ -17,9 +19,8 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Github : http://github.com/bhhan5274
  */
 
-@ExtendWith(SpringExtension.class)
 @DataJpaTest
-public class PostRepositoryTest {
+public class PostRepositoryTest extends BaseTest {
 
     @Autowired
     private PostRepository postRepository;
