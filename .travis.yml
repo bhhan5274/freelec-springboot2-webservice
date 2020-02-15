@@ -8,6 +8,8 @@ branches:
 
 before_install:
   - chmod +x mvnw
+  - chmod +x appspec.yml
+  - chmod +x scripts/deploy.sh
 
 # Travis CI 서버의 Home
 cache:
