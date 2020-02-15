@@ -32,7 +32,7 @@ public class IndexController {
             model.addAttribute("loginName", user.getName());
         }
 
-        return "/index";
+        return "index";
     }
 
     @GetMapping("/post/save")
