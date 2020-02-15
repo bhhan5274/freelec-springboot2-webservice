@@ -5,12 +5,15 @@ jdk:
 branches:
   only:
     - master
+    
+before_install: 
+  - chmod +x mvnw
 
 # Travis CI 서버의 Home
 cache:
   directories:
     - '$HOME/.m2/repository'
-script: './mvnw.cmd clean package'
+script: './mvnw clean package'
 
 notifications:
   email:
