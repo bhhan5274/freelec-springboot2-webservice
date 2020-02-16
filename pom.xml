@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.bhhan.freelec</groupId>
     <artifactId>springboot2-webservice</artifactId>
-    <version>0.0.7-SNAPSHOT</version>
+    <version>0.0.8-SNAPSHOT</version>
     <name>springboot2-webservice</name>
     <description>Demo project for Spring Boot</description>
 
